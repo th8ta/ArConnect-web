@@ -65,9 +65,14 @@ export default function Nav() {
         >
           Arweave
         </a>
-        <Link href="/docs">
-          <a className={styles.MenuItem}>Docs</a>
-        </Link>
+        <a
+          className={styles.MenuItem}
+          href="https://th8ta.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Company
+        </a>
         <div className={styles.EndGroup}>
           <a
             className={styles.MenuItem + " " + styles.MenuBtn}
