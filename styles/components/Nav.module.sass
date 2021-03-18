@@ -1,14 +1,18 @@
+$sidePaddingNormal: 17.5%
+  
 .Nav
   position: sticky
   top: 0
-  left: 0
-  right: 0
   background-color: #fff
   display: flex
   align-items: center
   justify-content: space-between
   z-index: 100
-  padding: 1.3em 17.5%
+  padding: 1.3em $sidePaddingNormal
+  transition: box-shadow .23s ease-in-out
+
+  &.Scrolled
+    box-shadow: rgb(#000, .1) 0px 0px 15px 0px
 
   .Logo
     display: flex
@@ -64,3 +68,15 @@
 
         &:hover
           background-color: rgba($bg, .2)
+
+.Info
+  background-color: #000
+  padding: .44em $sidePaddingNormal
+  font-size: 1.1em
+  font-weight: 400
+  color: #fff
+  text-align: right
+
+  a
+    color: #fff
+    font-weight: 600
