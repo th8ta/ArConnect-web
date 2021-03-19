@@ -1,11 +1,11 @@
 import { Page } from "@geist-ui/react";
 import { MarkdownPreview } from "react-marked-markdown";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Metas from "../components/Metas";
 import Nav from "../components/Nav";
 import styles from "../styles/views/docs.module.sass";
-import { useEffect, useState } from "react";
 
 export default function Docs() {
   const [docsVal, setDocsVal] = useState("");
