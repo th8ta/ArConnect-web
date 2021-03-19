@@ -106,6 +106,15 @@ export default function Home() {
           </div>
         </div>
       </Page>
+      <div className={styles.Uses}>
+        <Page size="large">
+          <h1>Who's using ArConnect?</h1>
+          <p>
+            ArConnect gains more adoption day by day as developers and apps open
+            to a more secure and safer web!
+          </p>
+        </Page>
+      </div>
     </>
   );
 }
