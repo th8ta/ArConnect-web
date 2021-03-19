@@ -35,7 +35,7 @@ export default function Docs() {
       <Nav />
       <Page size="large" className={styles.Docs}>
         <h1>Documentation</h1>
-        <MarkdownPreview value={docsVal.replaceAll("# ArConnect", "")} />
+        <MarkdownPreview value={docsVal.replace("# ArConnect", "")} />
       </Page>
       <Footer />
     </>
