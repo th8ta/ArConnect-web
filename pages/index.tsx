@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Nav from "../components/Nav";
 import Head from "next/head";
 import Metas from "../components/Metas";
+import Link from "next/link";
+import arverifyLogo from "../assets/arverify.svg";
+import vertoLogo from "../assets/verto.svg";
 import styles from "../styles/views/home.module.sass";
 
 export default function Home() {
@@ -110,8 +113,35 @@ export default function Home() {
         <Page size="large">
           <h1>Who's using ArConnect?</h1>
           <p>
-            ArConnect gains more adoption day by day as developers and apps open
-            to a more secure and safer web!
+            ArConnect is gaining more adoption day by day as developers and apps
+            open to a more secure and safer web!
+          </p>
+          <div className={styles.Apps}>
+            <a
+              href="https://verto.exchange"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo + " " + styles.Pending}>
+                <img src={vertoLogo} alt="V" draggable={false} />
+              </div>
+              <span>Pending integration</span>
+            </a>
+            <a
+              href="https://arverify.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo + " " + styles.Pending}>
+                <img src={arverifyLogo} alt="ArVerify" draggable={false} />
+              </div>
+              <span>Pending integration</span>
+            </a>
+          </div>
+          <p className={styles.Integrate}>
+            <Link href="/docs">Integrate</Link> ArConnect today!
           </p>
         </Page>
       </div>

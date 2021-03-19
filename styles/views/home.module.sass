@@ -98,9 +98,57 @@
     font-size: 1.3em
     text-align: center
     color: #696969
-    margin-bottom: 1.33em
+    margin-bottom: 3.5em
 
     @media screen and (max-width: 720px)
       font-size: 1.05em
 
   .Apps
+    display: flex
+    align-items: stretch
+    justify-content: center
+    flex-flow: row wrap
+    margin-bottom: 3.5em
+
+    &::before, &::after
+      content: ""
+      width: 100%
+      order: 1
+
+    .App
+      margin: 0 2em
+      text-align: center
+      color: #414141
+
+      &:nth-child(n + 4)
+        order: 1
+
+      &:nth-child(n + 7)
+        order: 2
+
+      .AppLogo
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 200px
+        height: 200px
+        transition: all .23s ease-in-out
+
+        &.Pending img
+          filter: grayscale(65%)
+
+        img
+          display: block
+          width: 100%
+          user-select: none
+
+        &:hover
+          transform: scale(1.1)
+
+      span
+        display: block
+        margin-top: 1em
+        font-size: 1.15em
+
+  .Integrate
+    margin: 0
