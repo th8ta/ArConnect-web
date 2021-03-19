@@ -29,13 +29,14 @@ export default function Nav() {
         ArConnect just released on the{" "}
         <a
           href={
-            (browser === "firefox" && "") || // TODO firefox link
-            "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
+            browser === "firefox"
+              ? "" // TODO firefox link
+              : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
           }
           target="_blank"
           rel="noopener noreferrer"
         >
-          {(browser === "firefox" && "Frefox Add-ons") || "Chrome Web Store"}
+          {browser === "firefox" ? "Frefox Add-ons" : "Chrome Web Store"}
         </a>
         →
       </div>
@@ -79,8 +80,9 @@ export default function Nav() {
           <a
             className={styles.MenuItem + " " + styles.MenuBtn}
             href={
-              (browser === "firefox" && "") || // TODO firefox link
-              "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
+              browser === "firefox"
+                ? "" // TODO firefox link
+                : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
             }
             target="_blank"
             rel="noopener noreferrer"

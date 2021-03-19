@@ -8,6 +8,8 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import arverifyLogo from "../assets/arverify.svg";
 import vertoLogo from "../assets/verto.svg";
+import interfaceThumb from "../assets/interface.png";
+import authThumb from "../assets/auth.png";
 import styles from "../styles/views/home.module.sass";
 
 export default function Home() {
@@ -49,8 +51,9 @@ export default function Home() {
                 style={{ marginRight: ".55em" }}
                 onClick={() =>
                   window.open(
-                    (browser === "firefox" && "") || // TODO firefox link
-                      "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
+                    browser === "firefox"
+                      ? "" // TODO firefox link
+                      : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
                   )
                 }
               >
@@ -94,7 +97,7 @@ export default function Home() {
               </p>
             </div>
             <img
-              src="https://picsum.photos/id/1060/536/354?blur=2"
+              src={interfaceThumb}
               alt="feature"
               style={{ marginLeft: "3.5em" }}
               draggable={false}
@@ -102,7 +105,7 @@ export default function Home() {
           </div>
           <div className={styles.AboutSection}>
             <img
-              src="https://picsum.photos/id/1060/536/354?blur=2"
+              src={authThumb}
               alt="feature"
               style={{ marginRight: "3.5em" }}
               draggable={false}
