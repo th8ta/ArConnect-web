@@ -2,6 +2,9 @@
   position: relative
   height: 85vh
 
+  @media screen and (max-width: 720px)
+    height: 70vh
+
   .Content
     position: absolute
     top: 50%
@@ -15,22 +18,40 @@
       line-height: 1.1em
       text-align: center
 
+      @media screen and (max-width: 720px)
+        font-size: 3em
+
     p
       font-size: 1.3em
       text-align: center
       color: #696969
       margin-bottom: 1.5em
 
+      @media screen and (max-width: 720px)
+        font-size: 1.25em
+
     .Btns
       display: flex
       justify-content: center
 
+      @media screen and (max-width: 720px)
+        display: block
+
+        button
+          display: block
+          margin: 1em auto !important
+
 .About
   .AboutSection
+    $bottomSpace: 135px
     display: flex
     align-items: center
     justify-content: space-between
-    margin-bottom: 135px
+    margin-bottom: $bottomSpace
+
+    @media screen and (max-width: 720px)
+      display: block
+      margin-bottom: $bottomSpace / 2
 
     &:last-child
       margin-bottom: 0
@@ -41,6 +62,9 @@
       border-radius: 8px
       box-shadow: 0 13px 27px -5px hsl(240deg 30% 28% / 25%), 0 8px 16px -8px hsl(0deg 0% 0% / 30%), 0 -6px 16px -6px hsl(0deg 0% 0% / 3%)
       user-select: none
+
+      @media screen and (max-width: 720px)
+        display: none
 
     h1
       font-size: 2em

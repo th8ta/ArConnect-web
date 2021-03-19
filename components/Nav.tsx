@@ -46,33 +46,35 @@ export default function Nav() {
             <span>ArConnect</span>
           </a>
         </Link>
-        <Link href="/docs">
-          <a className={styles.MenuItem}>Docs</a>
-        </Link>
-        <a
-          className={styles.MenuItem}
-          href="https://blog.th8ta.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Blog
-        </a>
-        <a
-          className={styles.MenuItem}
-          href="https://arweave.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Arweave
-        </a>
-        <a
-          className={styles.MenuItem}
-          href="https://th8ta.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Company
-        </a>
+        <div className={styles.MiddleGroup}>
+          <Link href="/docs">
+            <a className={styles.MenuItem}>Docs</a>
+          </Link>
+          <a
+            className={styles.MenuItem}
+            href="https://blog.th8ta.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </a>
+          <a
+            className={styles.MenuItem}
+            href="https://arweave.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Arweave
+          </a>
+          <a
+            className={styles.MenuItem}
+            href="https://th8ta.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Company
+          </a>
+        </div>
         <div className={styles.EndGroup}>
           <a
             className={styles.MenuItem + " " + styles.MenuBtn}
