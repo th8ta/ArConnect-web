@@ -1,4 +1,4 @@
-import { Page } from "@geist-ui/react";
+import { Page, Code } from "@geist-ui/react";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Metas from "../components/Metas";
@@ -24,45 +24,69 @@ export default function FAQ() {
         </p>
         <div className={styles.Questions}>
           <div className={styles.QAndA}>
-            <h3>Question one blah blah blah todo?</h3>
+            <h3>Do you upload or post my keyfile anywhere?</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elitulla
-              aperiam mollitia, libero, facere recusandae nam quod repudiandae
-              quisquam eaque?
+              <b>No we don't.</b> ArConnect is built to be a secure Arweave
+              wallet extension, but it does not back up your keyfiles and it
+              never uploads them anywhere. Your wallets will be saved to your
+              browser's local storage only. <br />
+              You can check out our{" "}
+              <a
+                href="https://github.com/th8ta/ArConnect"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                source code
+              </a>{" "}
+              if you want to make sure.
             </p>
           </div>
           <div className={styles.QAndA}>
-            <h3>Question one blah blah blah todo?</h3>
+            <h3>
+              Why is ArConnect more secure than just uploading my keyfile?
+            </h3>
             <p>
-              Lorem, iperror iusto nulla aperiam mollitia, libero, facere
-              recusandae nam quod repudiandae quisquam eaque?
+              <b>
+                ArConnect signs transactions locally, only on the client side.
+              </b>{" "}
+              If you upload your keyfile somewhere, there is a chance that
+              either malicious dApps or a third party tries to steal it from
+              you.
             </p>
           </div>
           <div className={styles.QAndA}>
-            <h3>Question one blah blah blah todo?</h3>
+            <h3>Do you charge any fees?</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur debitis eum a exercitationem ut aut, similique
-              laboriosam error iusto nulla aperiam mollitia, libero, facere
-              recusandae nam quod repudiandae quisquam eaque?
+              We at{" "}
+              <a
+                href="https://th8ta.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                th8ta
+              </a>{" "}
+              are working hard to bring you the best experiences on the
+              permaweb. Because of this, we take a small tip whenever a
+              3rd-party application utilizes ArConnect. This tip goes to a
+              randomly-selected VRT token holder:
+              <ul>
+                <li>
+                  <Code>$0.03</Code> USD-equivalent of AR for the first 10
+                  transactions
+                </li>
+                <li>
+                  <Code>$0.01</Code> USD-equivalent of AR for all subsequent
+                  transactions
+                </li>
+              </ul>
             </p>
           </div>
           <div className={styles.QAndA}>
-            <h3>Question one blah blah blah todo?</h3>
+            <h3>Do you charge fees for transfers made with the extension?</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur debitis eum a exercitationem ut aut, similique
-              laboriosam error iusto nulla aperiam mollitia, libero, facere
-              recusandae nam quod repudiandae quisquam eaque?
-            </p>
-          </div>
-          <div className={styles.QAndA}>
-            <h3>Question one blah blah blah todo?</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur debitis eum a exercitationem ut aut, similique
-              laboriosam error iusto nulla aperiam mollitia, libero, facere
-              recusandae nam quod repudiandae quisquam eaque?
+              We do not charge fees for AR transfers or PST transfers that{" "}
+              <b>you as the user</b> make inside the extension. We only charge
+              fees when interacting with dApps.
             </p>
           </div>
         </div>

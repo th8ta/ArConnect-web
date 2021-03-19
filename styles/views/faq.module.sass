@@ -24,19 +24,42 @@
     align-items: flex-start
     flex-wrap: wrap
 
+    @media screen and (max-width: 720px)
+      display: block
+
     .QAndA
       width: 47%    
       margin-bottom: 4em
-      
+
+      @media screen and (max-width: 720px)
+        width: 100%
+        margin-bottom: 2em
+
+        &:last-child
+          margin-bottom: 0
+
       h3
         font-size: 2em
         font-weight: 700
         line-height: 1.07em
+        margin-bottom: .7em
 
-      p
+        @media screen and (max-width: 720px)
+          font-size: 1.7em
+          line-height: 1.2em
+
+      p, ul li
         font-size: 1.2em
         color: #757575
         font-weight: 400
+        margin: 0
+
+        @media screen and (max-width: 720px)
+          font-size: 1.1em
+
+      p
         text-align: justify
         line-height: 1.49em
-        margin: 0
+
+      ul li
+        font-size: 1em
