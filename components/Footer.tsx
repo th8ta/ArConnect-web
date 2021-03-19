@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
         <div className={styles.branding}>
           <div>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" draggable={false} />
             ArConnect
           </div>
         </div>
