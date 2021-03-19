@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import Head from "next/head";
 import Metas from "../components/Metas";
 import Link from "next/link";
+import Footer from "../components/Footer";
 import arverifyLogo from "../assets/arverify.svg";
 import vertoLogo from "../assets/verto.svg";
 import styles from "../styles/views/home.module.sass";
@@ -110,7 +111,7 @@ export default function Home() {
         </div>
       </Page>
       <div className={styles.Uses}>
-        <Page size="large">
+        <Page size="large" style={{ minHeight: "unset" }}>
           <h1>Who's using ArConnect?</h1>
           <p>
             ArConnect is gaining more adoption day by day as developers and apps
@@ -161,6 +162,7 @@ await arweave.transactions.post(tx);`}</Code>
           </p>
         </div>
       </Page>
+      <Footer />
     </>
   );
 }
