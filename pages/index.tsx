@@ -78,10 +78,19 @@ export default function Home() {
             <div>
               <h1>View, Swap and Transfer assets</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                aut ut, numquam enim veniam laudantium obcaecati libero ullam
-                vitae qui officiis, magni mollitia delectus a nemo? Dolorem sunt
-                vitae tempore.
+                With ArConnect's user-friendly interface, you can manage your
+                Arweave balance, view and transfer assets and see your latest
+                transactions. The extension allows you to add all your wallets
+                and switch between them easily. <br />
+                We are also planning to support PST swapping through{" "}
+                <a
+                  href="https://verto.exchange"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  The Verto Protocol
+                </a>
+                .
               </p>
             </div>
             <img
@@ -101,10 +110,11 @@ export default function Home() {
             <div>
               <h1>Interact with dApps</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-                aut ut, numquam enim veniam laudantium obcaecati libero ullam
-                vitae qui officiis, magni mollitia delectus a nemo? Dolorem sunt
-                vitae tempore.
+                ArConnect makes interacting with your favorite Arweave
+                applications seamless and secure. Transaction signing and text
+                encryption with keyfiles is done in the background{" "}
+                <b>by the extension</b>, and not the application. This ensures
+                that your keyfile will never be stolen.
               </p>
             </div>
           </div>
