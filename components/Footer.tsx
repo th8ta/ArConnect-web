@@ -15,6 +15,9 @@ export default function Footer() {
                 <Link href="/docs">Documentation</Link>
               </li>
               <li>
+                <Link href="/faq">FAQ</Link>
+              </li>
+              <li>
                 <a
                   href="https://blog.th8ta.org"
                   target="_blank"
