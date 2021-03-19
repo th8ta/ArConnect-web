@@ -84,9 +84,9 @@ export default function FAQ() {
           <div className={styles.QAndA}>
             <h3>Do you charge fees for transfers made with the extension?</h3>
             <p>
-              We do not charge fees for AR transfers or PST transfers that{" "}
-              <b>you as the user</b> make inside the extension. We only charge
-              fees when interacting with dApps.
+              <b>We do not</b> charge fees for AR transfers or PST transfers
+              that <b>you as the user</b> make inside the extension. We only
+              charge fees when interacting with dApps.
             </p>
           </div>
         </div>
