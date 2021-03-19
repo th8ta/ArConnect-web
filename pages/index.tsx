@@ -1,4 +1,4 @@
-import { Page, Button } from "@geist-ui/react";
+import { Page, Button, Code } from "@geist-ui/react";
 import { detect } from "detect-browser";
 import { useEffect, useRef, useState } from "react";
 import Nav from "../components/Nav";
@@ -126,7 +126,7 @@ export default function Home() {
               <div className={styles.AppLogo + " " + styles.Pending}>
                 <img src={vertoLogo} alt="V" draggable={false} />
               </div>
-              <span>Pending integration</span>
+              <span>Integration in progress</span>
             </a>
             <a
               href="https://arverify.org"
@@ -137,7 +137,7 @@ export default function Home() {
               <div className={styles.AppLogo + " " + styles.Pending}>
                 <img src={arverifyLogo} alt="ArVerify" draggable={false} />
               </div>
-              <span>Pending integration</span>
+              <span>Integration in progress</span>
             </a>
           </div>
           <p className={styles.Integrate}>
@@ -145,6 +145,22 @@ export default function Home() {
           </p>
         </Page>
       </div>
+      <Page size="large" style={{ minHeight: "unset" }}>
+        <div className={styles.Developers}>
+          <h1>Adopt ArConnect</h1>
+          <p>Signing transactions has never been safer and easier</p>
+          <div className={styles.IntegrateCode}>
+            <Code block>{`const tx = await arweave.createTransaction({
+  /* config */
+});\n
+await arweave.transactions.sign(tx);
+await arweave.transactions.post(tx);`}</Code>
+          </div>
+          <p style={{ marginBottom: "0" }}>
+            Read the <Link href="/docs">docs</Link> for deeper integration.
+          </p>
+        </div>
+      </Page>
     </>
   );
 }
