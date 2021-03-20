@@ -26,7 +26,7 @@ export default function FAQ() {
           <div className={styles.QAndA}>
             <h3>Do you upload or post my keyfile anywhere?</h3>
             <p>
-              <b>No we don't.</b> ArConnect is built to be a secure Arweave
+              <b>No, we don't.</b> ArConnect is built to be a secure Arweave
               wallet extension, but it does not back up your keyfiles and it
               never uploads them anywhere. Your wallets will be saved to your
               browser's local storage only. <br />
@@ -38,7 +38,7 @@ export default function FAQ() {
               >
                 source code
               </a>{" "}
-              if you want to make sure.
+              if you'd like to verify.
             </p>
           </div>
           <div className={styles.QAndA}>
@@ -85,7 +85,7 @@ export default function FAQ() {
             <h3>Do you charge fees for transfers made with the extension?</h3>
             <p>
               <b>We do not</b> charge fees for AR transfers or PST transfers
-              that <b>you as the user</b> make inside the extension. We only
+              that <b>you, as the user,</b> make inside the extension. We only
               charge fees when interacting with dApps.
             </p>
           </div>
