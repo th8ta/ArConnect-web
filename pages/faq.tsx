@@ -89,6 +89,15 @@ export default function FAQ() {
               charge fees when interacting with dApps.
             </p>
           </div>
+          <div className={styles.QAndA}>
+            <h3>How can I name a wallet?</h3>
+            <p>
+              It is very simple to add a custom label / nickname to your wallet.
+              Open the wallet manager dropdown, in the extension popup, than
+              just click the displayed name. It is an editable text, so your
+              changes will instantly appear.
+            </p>
+          </div>
         </div>
       </Page>
       <Footer />
