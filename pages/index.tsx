@@ -134,6 +134,17 @@ export default function Home() {
           </p>
           <div className={styles.Apps}>
             <a
+              href="https://ardrive.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo + " " + styles.Pending}>
+                <img src={ardriveLogo} alt="ArDrive" draggable={false} />
+              </div>
+              <span>Integration in progress</span>
+            </a>
+            <a
               href="https://verto.exchange"
               target="_blank"
               rel="noopener noreferrer"
@@ -163,17 +174,6 @@ export default function Home() {
             >
               <div className={styles.AppLogo + " " + styles.Pending}>
                 <img src={pianityLogo} alt="Pianity" draggable={false} />
-              </div>
-              <span>Integration in progress</span>
-            </a>
-            <a
-              href="https://ardrive.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.App}
-            >
-              <div className={styles.AppLogo + " " + styles.Pending}>
-                <img src={ardriveLogo} alt="ArDrive" draggable={false} />
               </div>
               <span>Integration in progress</span>
             </a>
