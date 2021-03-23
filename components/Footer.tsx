@@ -112,6 +112,14 @@ export default function Footer() {
             <img src={logo} alt="logo" draggable={false} />
             ArConnect
           </div>
+          <a
+            href="https://th8ta.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.th8ta}
+          >
+            th<span>8</span>ta
+          </a>
         </div>
         <p className={styles.copyright}>
           Copyright © {new Date().getFullYear()} th8ta. Licensed under the{" "}
