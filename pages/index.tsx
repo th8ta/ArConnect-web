@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import arverifyLogo from "../assets/arverify.svg";
 import vertoLogo from "../assets/verto.svg";
 import pianityLogo from "../assets/pianity.png";
+import ardriveLogo from "../assets/ardrive.png";
 import interfaceThumb from "../assets/interface.png";
 import authThumb from "../assets/auth.png";
 import styles from "../styles/views/home.module.sass";
@@ -162,6 +163,17 @@ export default function Home() {
             >
               <div className={styles.AppLogo + " " + styles.Pending}>
                 <img src={pianityLogo} alt="Pianity" draggable={false} />
+              </div>
+              <span>Integration in progress</span>
+            </a>
+            <a
+              href="https://ardrive.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo + " " + styles.Pending}>
+                <img src={ardriveLogo} alt="ArDrive" draggable={false} />
               </div>
               <span>Integration in progress</span>
             </a>
