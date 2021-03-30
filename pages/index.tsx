@@ -161,10 +161,10 @@ export default function Home() {
               rel="noopener noreferrer"
               className={styles.App}
             >
-              <div className={styles.AppLogo + " " + styles.Pending}>
+              <div className={styles.AppLogo}>
                 <img src={arverifyLogo} alt="ArVerify" draggable={false} />
               </div>
-              <span>Integration in progress</span>
+              <span>ArVerify</span>
             </a>
             <a
               //href=""

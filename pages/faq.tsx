@@ -55,6 +55,15 @@ export default function FAQ() {
             </p>
           </div>
           <div className={styles.QAndA}>
+            <h3>How can I name a wallet?</h3>
+            <p>
+              It is very simple to add a custom label / nickname to your wallet.
+              Open the wallet manager dropdown, in the extension popup, than
+              just click the displayed name. It is an editable text, so your
+              changes will instantly appear.
+            </p>
+          </div>
+          <div className={styles.QAndA}>
             <h3>Do you charge any fees?</h3>
             <p>
               We at{" "}
@@ -90,12 +99,11 @@ export default function FAQ() {
             </p>
           </div>
           <div className={styles.QAndA}>
-            <h3>How can I name a wallet?</h3>
+            <h3>Does ArConnect have dark mode?</h3>
             <p>
-              It is very simple to add a custom label / nickname to your wallet.
-              Open the wallet manager dropdown, in the extension popup, than
-              just click the displayed name. It is an editable text, so your
-              changes will instantly appear.
+              <b>Yes it does.</b> It is automatic, meaning that it will use your
+              browser's color scheme. To enable the dark theme, all you need to
+              do is to toggle your browser's dark mode.
             </p>
           </div>
         </div>
