@@ -22,6 +22,8 @@ export default function Home() {
     const browser = detect();
 
     if (!browser) return;
+    // @ts-ignore
+    if (window.navigator.brave !== undefined) return setBrowser("Brave");
     setBrowser(browser.name);
   }, []);
 
@@ -51,9 +53,15 @@ export default function Home() {
                 type="secondary"
                 size="large"
                 style={{ marginRight: ".55em" }}
+                disabled={browser === "firefox" || browser === "ff"}
+                title={
+                  browser === "firefox" || browser === "ff"
+                    ? "ArConnect is not yet released for non-chromium browsers"
+                    : undefined
+                }
                 onClick={() =>
                   window.open(
-                    browser === "firefox"
+                    browser === "firefox" || browser === "ff"
                       ? "" // TODO firefox link
                       : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
                   )

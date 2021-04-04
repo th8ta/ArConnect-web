@@ -26,19 +26,20 @@ export default function Nav() {
   return (
     <>
       <div className={styles.Info}>
-        ArConnect just released on the{" "}
-        <a
-          href={
-            browser === "firefox"
-              ? "" // TODO firefox link
-              : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
-          }
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {browser === "firefox" ? "Frefox Add-ons" : "Chrome Web Store"}
-        </a>
-        →
+        {(browser !== "firefox" && browser !== "ff" && (
+          <>
+            ArConnect just released on the{" "}
+            <a
+              href="https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chrome Web Store
+            </a>
+            →
+          </>
+        )) ||
+          "Coming soon to Firefox Add-ons"}
       </div>
       <div className={styles.Nav + (scrolled ? " " + styles.Scrolled : "")}>
         <Link href="/#">
@@ -75,9 +76,14 @@ export default function Nav() {
           <a
             className={styles.MenuItem + " " + styles.MenuBtn}
             href={
-              browser === "firefox"
-                ? "" // TODO firefox link
+              browser === "firefox" || browser === "ff"
+                ? undefined // TODO firefox link
                 : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
+            }
+            style={
+              browser === "firefox" || browser === "ff"
+                ? { opacity: 0.7, cursor: "not-allowed" }
+                : {}
             }
             target="_blank"
             rel="noopener noreferrer"
