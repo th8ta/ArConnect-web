@@ -7,9 +7,11 @@ import Metas from "../components/Metas";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import arverifyLogo from "../assets/arverify.svg";
+import kyveLogo from "../assets/kyve.svg";
+import wisdomWizardsLogo from "../assets/wisdomwizards.png";
 import vertoLogo from "../assets/verto.svg";
 import pianityLogo from "../assets/pianity.png";
-import ardriveLogo from "../assets/ardrive.png";
+import ardriveLogo from "../assets/ardrive.svg";
 import interfaceThumb from "../assets/interface.png";
 import authThumb from "../assets/auth.png";
 import styles from "../styles/views/home.module.sass";
@@ -164,6 +166,17 @@ export default function Home() {
               <span>Integration in progress</span>
             </a>
             <a
+              href="https://kyve.network"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo}>
+                <img src={kyveLogo} alt="KYVE" draggable={false} />
+              </div>
+              <span>KYVE</span>
+            </a>
+            <a
               href="https://arverify.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -184,6 +197,21 @@ export default function Home() {
                 <img src={pianityLogo} alt="Pianity" draggable={false} />
               </div>
               <span>Integration in progress</span>
+            </a>
+            <a
+              href="https://community.xyz/#eCUK6Jrt30GKy_EKkbgExt1G0Qf_AhNAvzu4977E5sw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo}>
+                <img
+                  src={wisdomWizardsLogo}
+                  alt="Wisdom Wizards"
+                  draggable={false}
+                />
+              </div>
+              <span>Wisdom Wizards</span>
             </a>
           </div>
           <p className={styles.Integrate}>
