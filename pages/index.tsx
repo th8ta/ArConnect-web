@@ -12,6 +12,8 @@ import wisdomWizardsLogo from "../assets/wisdomwizards.png";
 import vertoLogo from "../assets/verto.svg";
 import pianityLogo from "../assets/pianity.png";
 import ardriveLogo from "../assets/ardrive.svg";
+import xyzlogo from "../assets/xyz.png";
+import argoraLogo from "../assets/argora.png";
 import interfaceThumb from "../assets/interface.png";
 import authThumb from "../assets/auth.png";
 import styles from "../styles/views/home.module.sass";
@@ -149,10 +151,10 @@ export default function Home() {
               rel="noopener noreferrer"
               className={styles.App}
             >
-              <div className={styles.AppLogo + " " + styles.Pending}>
+              <div className={styles.AppLogo}>
                 <img src={ardriveLogo} alt="ArDrive" draggable={false} />
               </div>
-              <span>Integration in progress</span>
+              <span>ArDrive</span>
             </a>
             <a
               href="https://verto.exchange"
@@ -160,10 +162,10 @@ export default function Home() {
               rel="noopener noreferrer"
               className={styles.App}
             >
-              <div className={styles.AppLogo + " " + styles.Pending}>
+              <div className={styles.AppLogo}>
                 <img src={vertoLogo} alt="V" draggable={false} />
               </div>
-              <span>Integration in progress</span>
+              <span>Verto</span>
             </a>
             <a
               href="https://kyve.network"
@@ -177,6 +179,17 @@ export default function Home() {
               <span>KYVE</span>
             </a>
             <a
+              href="https://community.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo}>
+                <img src={xyzlogo} alt="Community XYZ" draggable={false} />
+              </div>
+              <span>Community XYZ</span>
+            </a>
+            <a
               href="https://arverify.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -186,6 +199,17 @@ export default function Home() {
                 <img src={arverifyLogo} alt="ArVerify" draggable={false} />
               </div>
               <span>ArVerify</span>
+            </a>
+            <a
+              href="https://argora.xyz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo}>
+                <img src={argoraLogo} alt="ArGora" draggable={false} />
+              </div>
+              <span>ArGora</span>
             </a>
             <a
               //href=""
