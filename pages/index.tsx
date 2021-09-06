@@ -14,6 +14,7 @@ import pianityLogo from "../assets/pianity.png";
 import ardriveLogo from "../assets/ardrive.svg";
 import xyzlogo from "../assets/xyz.png";
 import argoraLogo from "../assets/argora.png";
+import arwikiLogo from "../assets/arwiki.png";
 import interfaceThumb from "../assets/interface.png";
 import authThumb from "../assets/auth.png";
 import styles from "../styles/views/home.module.sass";
@@ -210,6 +211,17 @@ export default function Home() {
                 <img src={argoraLogo} alt="ArGora" draggable={false} />
               </div>
               <span>ArGora</span>
+            </a>
+            <a
+              href="https://arwiki.wiki/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.App}
+            >
+              <div className={styles.AppLogo}>
+                <img src={arwikiLogo} alt="ArWiki" draggable={false} />
+              </div>
+              <span>ArWiki</span>
             </a>
             <a
               //href=""
