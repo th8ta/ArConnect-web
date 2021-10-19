@@ -20,16 +20,20 @@ import authThumb from "../assets/auth.png";
 import styles from "../styles/views/home.module.sass";
 
 export default function Home() {
-  const [browser, setBrowser] = useState<string>();
+  const [browser, setBrowser] = useState<string>("Chrome");
   const aboutSection = useRef<HTMLDivElement>();
 
   useEffect(() => {
     const browser = detect();
 
     if (!browser) return;
-    // @ts-ignore
-    if (window.navigator.brave !== undefined) return setBrowser("Brave");
-    setBrowser(browser.name);
+    // @ts-expect-error
+    if (window.navigator.brave) return setBrowser("Brave");
+    // @ts-expect-error
+    else if (window.chrome || window.navigator.userAgent.match("CriOS"))
+      setBrowser("Chrome");
+    else if (navigator.userAgent.match("Firefox")) setBrowser("Firefox");
+    else setBrowser(browser.name);
   }, []);
 
   return (
@@ -58,16 +62,10 @@ export default function Home() {
                 type="secondary"
                 size="large"
                 style={{ marginRight: ".55em" }}
-                disabled={browser === "firefox" || browser === "ff"}
-                title={
-                  browser === "firefox" || browser === "ff"
-                    ? "ArConnect is not yet released for non-chromium browsers"
-                    : undefined
-                }
                 onClick={() =>
                   window.open(
-                    browser === "firefox" || browser === "ff"
-                      ? "" // TODO firefox link
+                    browser.toLowerCase() === "firefox" || browser === "ff"
+                      ? "https://addons.mozilla.org/en-GB/firefox/addon/arconnect/"
                       : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
                   )
                 }

@@ -6,14 +6,20 @@ import logo from "../assets/logo.png";
 import styles from "../styles/components/Nav.module.sass";
 
 export default function Nav() {
-  const [browser, setBrowser] = useState<string>();
+  const [browser, setBrowser] = useState<string>("Chrome");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const browser = detect();
 
     if (!browser) return;
-    setBrowser(browser.name);
+    // @ts-expect-error
+    if (window.navigator.brave) return setBrowser("Brave");
+    // @ts-expect-error
+    else if (window.chrome || window.navigator.userAgent.match("CriOS"))
+      setBrowser("Chrome");
+    else if (navigator.userAgent.match("Firefox")) setBrowser("Firefox");
+    else setBrowser(browser.name);
   }, []);
 
   useEffect(() => {
@@ -26,20 +32,21 @@ export default function Nav() {
   return (
     <>
       <div className={styles.Info}>
-        {(browser !== "firefox" && browser !== "ff" && (
-          <>
-            ArConnect just released on the{" "}
-            <a
-              href="https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chrome Web Store
-            </a>
-            →
-          </>
-        )) ||
-          "Coming soon to Firefox Add-ons"}
+        ArConnect just released on the{" "}
+        <a
+          href={
+            browser.toLowerCase() === "firefox" || browser === "ff"
+              ? "https://addons.mozilla.org/en-GB/firefox/addon/arconnect/"
+              : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
+          }
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {browser.toLowerCase() === "firefox" || browser === "ff"
+            ? "Firefox Store"
+            : "Chrome Web Store"}
+        </a>
+        →
       </div>
       <div className={styles.Nav + (scrolled ? " " + styles.Scrolled : "")}>
         <Link href="/#">
@@ -76,8 +83,8 @@ export default function Nav() {
           <a
             className={styles.MenuItem + " " + styles.MenuBtn}
             href={
-              browser === "firefox" || browser === "ff"
-                ? undefined // TODO firefox link
+              browser.toLowerCase() === "firefox" || browser === "ff"
+                ? "https://addons.mozilla.org/en-GB/firefox/addon/arconnect/"
                 : "https://chrome.google.com/webstore/detail/arconnect/einnioafmpimabjcddiinlhmijaionap"
             }
             style={
